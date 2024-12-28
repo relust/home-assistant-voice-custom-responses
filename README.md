@@ -13,7 +13,6 @@ Through this project, custom random responses can be added to the Home Assistant
 - wake word, push to talk, on-demand and continuous conversation support
 - service exposed in HA to start and stop the voice assistant from another device/trigger
 - visual feedback of the wake word listening/audio recording/success/error status via the satellite LEDs
-- visual feedback on the tablet display
 - changing assistants and language from the graphical interface or with voice commands.
 
   ## Pre-requisites
@@ -21,3 +20,7 @@ Through this project, custom random responses can be added to the Home Assistant
 - Home Assistant 2024.12.0 or newer
 - A voice assistant [configured in HA](https://my.home-assistant.io/redirect/voice_assistants/) with STT and TTS in a language of your choice
 - ESPHome  2024.12.2 or newer
+
+  ## Instructions
+- Pair the Home Assistant Voice satellite with Home Assistant via Improv BLE using the Home Assistant application on your mobile phone with bluetooth enabled and add it to the EspHome integration.
+- In the EspHome integration from the Settings/Devices&services tab, press the `CONFIGURE` button on the paired satellite and check the box `Allow the device to perform Home Assistant actions`.
