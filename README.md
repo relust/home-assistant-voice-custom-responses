@@ -24,3 +24,7 @@ Through this project, custom random responses can be added to the Home Assistant
   ## Instructions
 - Pair the Home Assistant Voice satellite with Home Assistant via Improv BLE using the Home Assistant application on your mobile phone with bluetooth enabled and add it to the EspHome integration.
 - In the EspHome integration from the Settings/Devices&services tab, press the `CONFIGURE` button on the paired satellite and check the box `Allow the device to perform Home Assistant actions`.
+- Open the `ESPHome Builder` tab from the Home Assistant's main menu and check `Show discovered devices` from three dots menu on the top right and click on the button Take control of the discovered satellite.
+- Click on the `EDIT` button of the satellite to enter the editing window.
+- Copy the official code of the Home Assistant Voice satellite from [github] (https://github.com/esphome/home-assistant-voice-pe/blob/dev/home-assistant-voice.yaml)
+
