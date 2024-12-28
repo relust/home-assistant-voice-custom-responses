@@ -26,5 +26,13 @@ Through this project, custom random responses can be added to the Home Assistant
 - In the EspHome integration from the Settings/Devices&services tab, press the `CONFIGURE` button on the paired satellite and check the box `Allow the device to perform Home Assistant actions`.
 - Open the `ESPHome Builder` tab from the Home Assistant's main menu and check `Show discovered devices` from three dots menu on the top right and click on the button Take control of the discovered satellite.
 - Click on the `EDIT` button of the satellite to enter the editing window.
-- Copy the official code of the Home Assistant Voice satellite from [github](https://github.com/esphome/home-assistant-voice-pe/blob/dev/home-assistant-voice.yaml)
+- Copy the official code of the Home Assistant Voice satellite from [github](https://github.com/esphome/home-assistant-voice-pe/blob/dev/home-assistant-voice.yaml) and paste in the satellite editing window of EspHome builder.
+- Comment the two lines for `packages` in the satellite code.
+- Cut&paste the lines with the satellite name in EspHome in the similar column in the new code
+`
+esphome:
+  name: ${name}
+  name_add_mac_suffix: false
+  friendly_name: ${friendly_name}`
+- 
 
