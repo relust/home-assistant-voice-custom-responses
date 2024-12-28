@@ -97,3 +97,4 @@ wifi:
                 lambda: return id(nabu_media_player)->state == media_player::MediaPlayerState::MEDIA_PLAYER_STATE_IDLE;
               timeout: 2s
 ```
+- Click on `SAVE` then on `INSTALL` and then on `Wiressly` in the upper right corner of the editing window.
