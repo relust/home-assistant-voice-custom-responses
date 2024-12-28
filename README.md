@@ -83,7 +83,7 @@ wifi:
           id: wake_word_sensor
           state: OFF
 ```
-- Add these lines of code ##ON TOP## of the `on_wake_word_detection` from `micro_wake_word` section of the satellite code
+- Add these lines of code `ON TOP` of the `on_wake_word_detection` from `micro_wake_word` section of the satellite code
 ```
     - if:
         condition:
