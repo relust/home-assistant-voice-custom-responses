@@ -18,7 +18,6 @@ Through this project, custom random responses can be added to the Home Assistant
 
   ## Pre-requisites
 
-- Home Assistant 2023.11.3 or newer
-- For tablets with browser or Home Assistant companion app, install Browser Mod integration with HACS. 
+- Home Assistant 2024.12.0 or newer
 - A voice assistant [configured in HA](https://my.home-assistant.io/redirect/voice_assistants/) with STT and TTS in a language of your choice
-- ESPHome 2023.11.6 or newer
+- ESPHome  2024.12.2 or newer
