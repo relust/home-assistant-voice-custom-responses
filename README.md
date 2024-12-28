@@ -33,12 +33,15 @@ Through this project, custom random responses can be added to the Home Assistant
 esphome:
   name: ${name}
   name_add_mac_suffix: false
-  friendly_name: ${friendly_name}```
+  friendly_name: ${friendly_name} 
+```
 
 - Cut&paste the lines with api encription key in the similar column in the new code
 - Cut&paste the lines with wifi setup in the similar column in the new code
+
 ```
 wifi:
   ssid: !secret wifi_ssid
-  password: !secret wifi_password```
+  password: !secret wifi_password 
+```
 
