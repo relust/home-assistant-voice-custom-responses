@@ -98,3 +98,4 @@ wifi:
               timeout: 2s
 ```
 - Click on `SAVE` then on `INSTALL` and then on `Wiressly` in the upper right corner of the editing window.
+- If you want, you have the complete code based on the Firmware: 2024.12.2 [here](https://github.com/relust/home-assistant-voice-custom-responses/blob/main/home-assistant-voice-custom-responses.yaml)
