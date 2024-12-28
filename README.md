@@ -55,4 +55,45 @@ wifi:
   ssid: !secret wifi_ssid
   password: !secret wifi_password 
 ```
-
+- Add these lines of code to the `switch` section of the satellite code
+```
+  - platform: template
+    id: custom_responses_switch
+    icon: "mdi:microphone-message"
+    name: Custom responses
+    entity_category: config
+    optimistic: true
+    restore_mode: RESTORE_DEFAULT_ON
+```
+- Add these lines of code to the `binary_sensor` section of the satellite code
+```
+  - platform: template
+    name: "Wake Word Detect"
+    id: wake_word_sensor
+```
+- Add these lines of code to the `script` section of the satellite code
+```
+  - id: activate_wake_word_sensor
+    then:
+      - binary_sensor.template.publish:
+          id: wake_word_sensor
+          state: ON
+      - delay: 1s
+      - binary_sensor.template.publish:
+          id: wake_word_sensor
+          state: OFF
+```
+- Add these lines of code #ON TOP# of the `on_wake_word_detection` from `micro_wake_word` section of the satellite code
+```
+    - if:
+        condition:
+          switch.is_on: custom_responses_switch
+        then:
+          - script.execute: activate_wake_word_sensor
+          - script.execute: control_leds_voice_assistant_waiting_for_command_phase
+          - delay: 1s
+          - wait_until:
+              condition:
+                lambda: return id(nabu_media_player)->state == media_player::MediaPlayerState::MEDIA_PLAYER_STATE_IDLE;
+              timeout: 2s
+```
