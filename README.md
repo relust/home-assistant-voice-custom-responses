@@ -37,6 +37,11 @@ esphome:
 ```
 
 - Cut&paste the lines with api encription key in the similar column in the new code
+```
+api:
+  encryption:
+    key: kk8WVxxxxxxxxxxxxxxxxxxxxxxxxxxvo0IKco=
+```
 - Cut&paste the lines with wifi setup in the similar column in the new code
 
 ```
