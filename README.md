@@ -156,7 +156,7 @@ actions:
                 media-source://tts/edge_tts?message={{ ['how can I help you',
                 'yes, i`m
                     listening', 'how can assist you'] | random
-                    }}=en-US-ChristopherNeural
+                    }}&language=en-US-ChristopherNeural
               media_content_type: provider
               announce: true
       - conditions:
