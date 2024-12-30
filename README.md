@@ -175,3 +175,42 @@ actions:
               announce: true
 mode: single
 ```
+- If you want to change the assistant or language with voice commands, you can use this automation
+```
+alias: Ha voice change assistants
+description: ""
+triggers:
+  - trigger: conversation
+    command:
+      - Vreau să vorbesc în engleză
+    id: english
+  - trigger: conversation
+    command: I want to speak in romanian
+    id: romanian
+conditions: []
+actions:
+  - choose:
+      - conditions:
+          - condition: trigger
+            id:
+              - english
+        sequence:
+          - action: select.select_option
+            metadata: {}
+            data:
+              option: Home Assistant en
+            target:
+              entity_id: select.home_assistant_voice_0903d5_pipeline_assist
+      - conditions:
+          - condition: trigger
+            id:
+              - romanian
+        sequence:
+          - action: select.select_option
+            metadata: {}
+            data:
+              option: Home Assistant ro
+            target:
+              entity_id: select.home_assistant_voice_0903d5_pipeline_assist
+mode: single
+```
