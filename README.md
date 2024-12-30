@@ -131,3 +131,47 @@ actions:
       announce: true
 mode: single
 ```
+- If you want more assistants or more languages, you can use this automation
+```
+alias: Ha voice custom responses
+description: ""
+triggers:
+  - trigger: state
+    entity_id:
+      - binary_sensor.home_assistant_voice_0903d5_wake_word_detect
+    to: "on"
+conditions: []
+actions:
+  - choose:
+      - conditions:
+          - condition: state
+            entity_id: select.home_assistant_voice_0903d5_pipeline_assist
+            state: Home Assistant en
+        sequence:
+          - action: media_player.play_media
+            target:
+              entity_id: media_player.home_assistant_voice_0903d5_media_player
+            data:
+              media_content_id: >-
+                media-source://tts/edge_tts?message={{ ['how can I help you',
+                'yes, i`m
+                    listening', 'how can assist you'] | random
+                    }}=en-US-ChristopherNeural
+              media_content_type: provider
+              announce: true
+      - conditions:
+          - condition: state
+            entity_id: select.home_assistant_voice_0903d5_pipeline_assist
+            state: Home Assistant ro
+        sequence:
+          - action: media_player.play_media
+            target:
+              entity_id: media_player.home_assistant_voice_0903d5_media_player
+            data:
+              media_content_id: >-
+                media-source://tts/edge_tts?message={{ ['spune te rog', 'cu ce
+                pot să te ajut', 'cum pot să te assist'] | random }}&language=ro-RO-EmilNeural
+              media_content_type: provider
+              announce: true
+mode: single
+```
