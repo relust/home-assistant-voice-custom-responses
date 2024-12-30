@@ -85,7 +85,7 @@ wifi:
 ```
 - Add these lines of code `ON TOP` of the `on_wake_word_detection` from `micro_wake_word` section of the satellite code
 ```
-    - if:
+- if:
         condition:
           switch.is_on: custom_responses_switch
         then:
