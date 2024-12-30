@@ -108,7 +108,7 @@ wifi:
 ```
 {{ ['how can I help you', 'yes, i`m  listening', 'how can assist you'] | random }}
 ```
-- This is the automation we created
+- This is the automation that you can use just by changing the names of the binary_sensor and the media_player
 ```
 alias: Ha voice custom responses
 description: ""
