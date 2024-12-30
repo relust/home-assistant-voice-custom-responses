@@ -100,11 +100,34 @@ wifi:
 - Click on `SAVE` then on `INSTALL` and then on `Wiressly` in the upper right corner of the editing window.
 - If you want, you have the complete code based on the Firmware: 2024.12.2 [here](https://github.com/relust/home-assistant-voice-custom-responses/blob/main/home-assistant-voice-custom-responses.yaml)
 - In Home Assistant go to  `Settings/Automations&scenes` and click on the blue button at the bottom right `CREATE AUTOMATION` and `Create new automation`
-- Click on `ADD TRIGGER` then on `Device` look for the satellite you installed then look for `Home Assistant voice Wake Word Detect turned on` and select it.
+- Click on `ADD TRIGGER` then on `Entity`/`State` and on Entity field search `Home Assistant voice Wake Word Detect` binary_sensor and select it, and then select `To On`.
 - Then under `ADD ACTION` look for Media player and then click on `Play media`
 - Select the desired satellite as media player, then click on `Pick media` and from `Text-to-speech` select the text to speech service, the desired language and the desired message (Ex. How can I help you).
 - Then click on the blue button at the bottom right SAVE and put a name to the automation (Ex. Ha voice custom responses)
 - If you want random responses, from the tree dots menu on the top right, select `Edit in YAML` and at `media_content_id`, replace the part with the message (ex: how+can+i+help+you) with random messages according to this model
 ```
 {{ ['how can I help you', 'yes, i`m  listening', 'how can assist you'] | random }}
+```
+- This is the automation we created
+  ```
+alias: Ha voice custom responses
+description: ""
+triggers:
+  - trigger: state
+    entity_id:
+      - binary_sensor.home_assistant_voice_0903d5_wake_word_detect
+    to: "on"
+conditions: []
+actions:
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.home_assistant_voice_0903d5_media_player
+    data:
+      media_content_id: >-
+        media-source://tts/edge_tts?message={{ ['how can I help you', 'yes, i`m
+        listening', 'how can assist you'] | random
+        }}&language=en-US-ChristopherNeural
+      media_content_type: provider
+      announce: true
+mode: single
 ```
