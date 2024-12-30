@@ -109,7 +109,7 @@ wifi:
 {{ ['how can I help you', 'yes, i`m  listening', 'how can assist you'] | random }}
 ```
 - This is the automation we created
-  ```
+```
 alias: Ha voice custom responses
 description: ""
 triggers:
