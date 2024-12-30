@@ -106,6 +106,5 @@ wifi:
 - Then click on the blue button at the bottom right SAVE and put a name to the automation (Ex. Ha voice custom responses)
 - If you want random responses, from the tree dots menu on the top right, select `Edit in YAML` and at `media_content_id`, replace the part with the message (ex: how+can+i+help+you) with random messages according to this model
 ```
-{{ ['how can I help you', 'yes, i`m
-        listening', 'how can assist you'] | random }}
+{{ ['how can I help you', 'yes, i`m  listening', 'how can assist you'] | random }}
 ```
