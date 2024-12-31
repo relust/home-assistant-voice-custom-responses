@@ -6,8 +6,7 @@ Through this project, custom random responses can be added to the Home Assistant
 
  Here's a video tutorial:
 
-[[https://www.youtube.com/watch?v=1bBOoUhnF4A&t=166s](https://www.youtube.com/watch?v=uWuYRvYWlws)]([https://www.youtube.com/watch?v=1bBOoUhnF4A&t=166s](https://www.youtube.com/watch?v=uWuYRvYWlws))
-
+[https://www.youtube.com/watch?v=1bBOoUhnF4A&t=166s](https://www.youtube.com/watch?v=uWuYRvYWlws&t=1s)
 ## Features
 
 - wake word, push to talk, on-demand and continuous conversation support
