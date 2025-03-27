@@ -93,11 +93,11 @@ wifi:
           - delay: 1s
           - wait_until:
               condition:
-                lambda: return id(nabu_media_player)->state == media_player::MediaPlayerState::MEDIA_PLAYER_STATE_IDLE;
+                lambda: return id(external_media_player)->state == media_player::MediaPlayerState::MEDIA_PLAYER_STATE_IDLE;
               timeout: 2s
 ```
 - Click on `SAVE` then on `INSTALL` and then on `Wiressly` in the upper right corner of the editing window.
-- If you want, you have the complete code based on the Firmware: 2024.12.2 [here](https://github.com/relust/home-assistant-voice-custom-responses/blob/main/home-assistant-voice-custom-responses.yaml)
+- If you want, you have the complete code based on the Firmware: 2025.3.2 [here](https://github.com/relust/home-assistant-voice-custom-responses/blob/main/home-assistant-voice-custom-responses.yaml)
 - In Home Assistant go to  `Settings/Automations&scenes` and click on the blue button at the bottom right `CREATE AUTOMATION` and `Create new automation`
 - Click on `ADD TRIGGER` then on `Entity`/`State` and on Entity field search `Home Assistant voice Wake Word Detect` binary_sensor and select it, and then select `To On`.
 - Then under `ADD ACTION` look for Media player and then click on `Play media`
